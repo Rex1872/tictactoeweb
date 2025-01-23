@@ -1,8 +1,8 @@
 class Board {
     constructor() {
-        this.state = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Initialzustand des Spielfelds
-        this.players = [1, -1]; // X = 1, O = -1
-        this.currentPlayer = 0; // 0 für Spieler X, 1 für Spieler O
+        this.state = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+        this.players = [1, -1]; 
+        this.currentPlayer = 0; 
     }
 
     makeTurn(cell) {
@@ -16,9 +16,9 @@ class Board {
     checkWin() {
         const s = this.players[this.currentPlayer];
         const winPatterns = [
-            [0, 1, 2], [3, 4, 5], [6, 7, 8],  // horizontale Gewinnmuster
-            [0, 3, 6], [1, 4, 7], [2, 5, 8],  // vertikale Gewinnmuster
-            [0, 4, 8], [2, 4, 6]               // diagonale Gewinnmuster
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],  
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+            [0, 4, 8], [2, 4, 6]               
         ];
         
         for (let pattern of winPatterns) {
